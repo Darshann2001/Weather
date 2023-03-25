@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1200px;
+  width: 98%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  height: 100%;
+  padding: 50px 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.parent {
+  background-image: url(/src/images/sunset.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.link {
+  position: absolute;
+  right: 30px;
+}
+
+.link>a {
+  color: white;
+  transition: all 0.3s;
+}
+
+.link>a:hover {
+  text-decoration: underline blue;
+  padding: 10px;
+}
+
+.description {
+  position: relative;
+  float: right;
+  transform: rotate(270deg);
+  margin: 0px 75px;
+  margin-top: -50px;
+  font-size: 25px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 17px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.bottom span {
+  margin: 4px 0px;
+  display: inline-block;
+}
+
+.nodata {
+  font-size: 50px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.input-text {
+  width: 300px;
+  right: 50%;
+  height: 30px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+}
+
+.location {
+  font-size: 40px;
+  margin: 10px 0px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 650px) {
+  .link {
+    bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .description {
+    margin: 0;
+    margin-top: -50px;
+  }
+
+}
+
+@media screen and (max-width: 393px) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom>div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
   }
 }
